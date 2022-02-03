@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class Main {
 
@@ -13,6 +14,12 @@ public class Main {
 		
 		cc.imprimirExtrado();
 		poupanca.imprimirExtrado();
+		
+		Banco banco = new Banco();
+		banco.setNome("Banco SHOW");
+		banco.setContas(Arrays.asList(cc, poupanca));
+		
+		banco.listarClientes();
 	}
 
 }
