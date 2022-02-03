@@ -2,10 +2,13 @@
 public class Main {
 
 	public static void main(String[] args) {
-		Conta cc = new ContaCorrente();
+		Cliente joao = new Cliente();
+		joao.setNome("João");
+		
+		Conta cc = new ContaCorrente(joao);
 		cc.depositar(100);
 		
-		Conta poupanca = new ContaPoupanca();
+		Conta poupanca = new ContaPoupanca(joao);
 		cc.transferir(100, poupanca);
 		
 		cc.imprimirExtrado();
